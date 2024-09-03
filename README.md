@@ -1,1 +1,4 @@
 # api-caching
+In this small project, we are basically doing API caching with Redis, flask and docker. In this I made a simple endpoint that fetches the university data from a API (Hipolabs universities API) .Based on the country that we sent as a query parameter, we get a list with the universities for the specified country.
+In this , I created an instance of Flask and used that to create an endpoint that fetches universities data. Used Postman to make the request (to see the time that my request takes to process). Next added Redis and dockerized the application.
+After caching, we see that it took very less time for a new request when it was already cached. For instance, if it took 1226 ms (see before-caching.png) for the first time and after again requesting the same request within the set timeframe it took 12 ms (see after-caching.png).
